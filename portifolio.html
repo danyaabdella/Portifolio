@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio </title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <header class="header">
+        
+        <a href="#" class="logo"><span>Dan</span>ya</a>
+
+        <nav class="navbar">
+            <a href="#" class="navbar">Home</a>
+            <a href="#about" class="navbar">About</a>
+            <a href="#experience" class="navbar">Experience</a>
+            <button id="theme-toggle">🌙</button>
+
+        </nav>
+
+        <a href="#contactMe" class="contact">Contact Me</a>
+    
+    </header>
+    
+    
+        <section class="home">
+            <div class="home-content">
+                <!-- <h3>Hi</h3> -->
+                <h1><span>Danya Abdella<br></span>FullStack Web Developer</h1>
+                <p>A student of bacheolor degree at bahirdar Institute of technology
+                </p>
+                <div class="btn-box">
+                    <button class="btn-1">Experience</button>
+                    <button onclick="window.location.href='skill.html'" class="btn-2">Skill </button>
+                </div>
+            </div>
+                <div class="img-box">
+                    <img src="image.jpeg" alt="not found"/>
+                </div>
+           
+        </section>
+        
+        <section id='about' class="about">
+            <div class="about-img">
+                <img src="image.jpeg"  alt="not found"/>
+            </div>
+            <div class="about-content">
+                <h2>About<span>Me</span></h2>
+                <!-- <h3>CS <span>Student</span></h3> -->
+                <p>I am a passionate Computer Science Student with a strong background in web development,
+                     cloud infrastructure, and software engineering. I specialize in building scalable applications 
+                     and integrating cloud solutions. My expertise spans various programming languages,
+                     backend services, and DevOps tools. I thrive on solving problems efficiently and continuously 
+                     learning the latest industry trends.
+                </p>
+                    <a class="btn-2" onclick="window.location.href='skill.html'">Skill</a>
+            </div>
+        </section>
+        <section id="experience" class="experience">
+            <h2>My <span>Experience</span></h2>
+            <div class="experience-container">
+                <button class="scroll-btn left" onclick="scrollExperience(-1)">&#10094;</button>
+                <div class="experience-wrapper">
+                    <div class="experience-card">
+                        <h3>E-learning</h3>
+                        <p>E-learning platform built using nextjs framework  and mongodb database  .</p>
+                        <img src="./img/e-learning.png"  alt="not found"/>
+                    </div>
+                    <div class="experience-card">
+                        <h3>Telegram Bot</h3>
+                        <p>Telegram bot built using Python to fetch courses.</p>
+                        <img src="./img/bot.png"  height="100%" alt="not found"/>
+                    </div>
+                    <div class="experience-card">
+                        <h3>Calculator</h3>
+                        <p>Designed a calculator using Java.</p>
+                        <img src="./img/calculator.png"  height="100%" alt="not found"/>
+                    </div>
+                    <div class="experience-card">
+                        <h3>Marketplace with auction</h3>
+                        <p>Currently working on project for digitilation of auction for local markets.</p>
+                        <img src="./img/auction.png"  height="100%" alt="not found"/>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollExperience(1)">&#10095;</button>
+            </div>
+            <p><a style="font-size: 24px;" href="https://github.com/danyaabdella">For more click here</a></p>
+        </section>
+        
+        <section id='contactMe' class="contact-form">
+            <h2>Contact<span>Me</span></h2>
+            <div class="input-box">
+                <form onsubmit="sendMessage(event)">
+                <input type="text" placeholder="FullName" name="fullname" id="name" oninput="showTyping(this)" onblur="hideTyping(this)"  "/><br/><br/>
+                <span id="typing-name" style="font-style: italic;" ></span>
+                <input type="email" placeholder="Email" name="email" id="email" oninput="showTyping(this)" onblur="hideTyping(this)""/><br/><br/>
+                <span id="typing-email" style="font-style: italic;"></span>
+                <input type="number" placeholder="Phone Number" name="phoneNumber" id="number" oninput="showTyping(this)" onblur="hideTyping(this)";"/><br/><br/>
+                <span id="typing-number" style="font-style: italic;" ></span>
+                <input type="text" placeholder="Subject" name="subject" id="text" oninput="showTyping(this)" onblur="hideTyping(this)""/><br/><br/>
+                <span id="typing-text" style="font-style: italic; "></span>
+                <textarea placeholder="YourMessage" cols="7" rows="5" name="message" id="message" oninput="showTyping(this)" onblur="hideTyping(this)""></textarea><br/><br/>
+                <span id="typing-message" style="font-style: italic; "></span>
+<!-- 
+                <input type="submit" value="Send Message" name="submitButton" id="submitButton" /><br/><br/>
+                <p id="confirmation"></p> Confirmation Message -->
+                <div>
+                    <form>
+                    <input type="submit" value="Send Message" name="submitButton" id="submitButton" ;/><br/><br/>
+                    <p id="confirmation"></p> <!-- Confirmation Message -->
+                    </form>
+                    
+                    
+                </div>
+                </form>
+            </div>
+           
+
+        </section>
+        <section>
+            <footer class="footer">
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/danya-abdella-a158a5278?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJnesVURuTg6FBk17i05JCg%3D%3D">
+                        <i class='bx bxl-linkedin-square' ></i>
+                    </a>
+                    <a href= "https://github.com/danyaabdella"><i class='bx bxl-github'></i></a>
+                    <a href="#https://www.instagram.com/__preety00/"><i class='bx bxl-instagram-alt' ></i></a>
+             
+                </div>
+                <ul class="list">
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#contactMe">contact</a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright"><i class='bx bxs-copyright'></i> 2024 Danya| All right reserved</p>
+            </footer>
+        </section>
+    
+</body>
+</html>
